@@ -1,6 +1,8 @@
 local wm = require('window-management')
 local hk = require "hs.hotkey"
 
+
+
 -- * Key Binding Utility
 --- Bind hotkey for window management.
 -- @function windowBind
@@ -19,9 +21,6 @@ windowBind({"ctrl","alt"}, {
   n = wm.throwLeft,
   p = wm.throwRight
 })
-
-
-
 -- * Set Window Position on screen
 windowBind({"ctrl","alt"}, {
   m = wm.maximizeWindow,    -- ⌃⌥⌘ + M
@@ -67,3 +66,11 @@ hs.hotkey.bind({"alt","cmd"}, "h",
 hs.hotkey.bind({"alt","cmd"}, "l",
    function() wm.moveWindowOneSpace("left") end,
    function() wm.moveWindowOneSpaceEnd("left") end)
+
+hs.hotkey.bind({}, 'f1', function()
+    hs.application.launchOrFocus('Google Chrome')
+end)
+
+hs.hotkey.bind({}, 'f10', function()
+  hs.application.launchOrFocus('Lock Screen Bundle')
+end)

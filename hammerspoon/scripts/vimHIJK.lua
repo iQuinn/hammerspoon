@@ -8,7 +8,7 @@ local function pressFn(mods, key)
 end
 
 local function remap(mods, key, pressFn)
-	hs.hotkey.bind(mods, key, pressFn, nil, pressFn)	
+	hs.hotkey.bind(mods, key, pressFn, nil, pressFn)
 end
 
 
@@ -54,3 +54,4 @@ remap({'ctrl', 'cmd', 'alt', 'shift'}, 'h', pressFn({'cmd', 'alt', 'shift'}, 'le
 remap({'ctrl', 'cmd', 'alt', 'shift'}, 'j', pressFn({'cmd', 'alt', 'shift'}, 'down'))
 remap({'ctrl', 'cmd', 'alt', 'shift'}, 'k', pressFn({'cmd', 'alt', 'shift'}, 'up'))
 remap({'ctrl', 'cmd', 'alt', 'shift'}, 'l', pressFn({'cmd', 'alt', 'shift'}, 'right'))
+remap({'alt'}, 'tab', pressFn({'cmd'}, '`'))

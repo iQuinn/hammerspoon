@@ -4,7 +4,7 @@ local application = require 'hs.application'
 
 local key2App = {
     a = 'App Store',
-    --b = 'Bear',
+    b = 'Vivaldi',
     d = 'Dash',
     f = 'Finder',
     g = 'Mail',
@@ -16,9 +16,10 @@ local key2App = {
     m = 'MarginNote X',
     s = 'Safari',
     t = 'iTerm',
+	-- v = 'VimR',
     w = 'WeChat',
-    z = 'Dictionary',
-    x = 'MacVim'
+    -- z = 'Dictionary',
+    -- x = 'MacVim'
 }
 
 for key, app in pairs(key2App) do
@@ -27,6 +28,7 @@ for key, app in pairs(key2App) do
         toggle_application(app)
     end)
 end
+
 
 -- reload
 hotkey.bind({"ctrl"}, 'escape', function() hs.reload() end)
